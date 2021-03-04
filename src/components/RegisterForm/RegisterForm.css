@@ -1,0 +1,112 @@
+@media all and (max-width: 767px) {
+  [role='alert'] {
+    color: red;
+  }
+
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 90%;
+    -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .registration-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+  }
+  .registration-input label {
+    padding: 10px;
+  }
+
+  .registration-input input {
+    width: 100%;
+  }
+
+  .registration-form footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .registration-form button {
+    min-width: 100px;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+@media all and (min-width: 767px) {
+  [role='alert'] {
+    color: red;
+  }
+
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 60%;
+    -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .registration-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+  }
+  .registration-input label {
+    padding: 10px;
+    font-size: 20px;
+    flex: 1;
+  }
+  .registration-input input {
+    font-size: 20px;
+    flex: 2;
+  }
+
+  .registration-form footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .registration-form button {
+    min-width: 200px;
+    margin: 10px 0px 25px 0px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .registration-form button:hover {
+    background-color: #fdf3c5;
+    transition-duration: 400ms;
+  }
+}
