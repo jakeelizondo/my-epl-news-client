@@ -70,6 +70,10 @@ const RegistrationForm = (props) => {
       </div>
       <div className="registration-input">
         <label htmlFor="registration-password-input">Choose a password</label>
+        <span className="tiny-text">
+          (must contain at least 1 uppercase, 1 lowercase, 1 number, and 1
+          special character)
+        </span>
         <input
           id="registration-password-input"
           name="password"
