@@ -8,7 +8,6 @@ import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
-import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 
 const NewsRoute = React.lazy(() => import('../../routes/NewsRoute/NewsRoute'));

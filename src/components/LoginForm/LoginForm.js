@@ -3,7 +3,6 @@ import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
-import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 
 const LoginForm = (props) => {
