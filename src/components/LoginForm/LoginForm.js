@@ -4,6 +4,7 @@ import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
 import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
+import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 
 const LoginForm = (props) => {
   const [error, setError] = useState(null);
@@ -31,6 +32,7 @@ const LoginForm = (props) => {
         props.onLoginSuccess();
       })
       .catch((response) => {
+        setIsLoading(false);
         setError(response.error.message);
       });
   };
@@ -52,7 +54,8 @@ const LoginForm = (props) => {
         />
       </div>
       <button>Login</button>
-      {isLoading && <LoadingIndicator />}
+      {isLoading && <SoccerLoadingIndicator />}
+      {/* {isLoading && <LoadingIndicator />} */}
     </form>
   );
 };

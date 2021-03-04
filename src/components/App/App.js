@@ -9,6 +9,7 @@ import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
 import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
+import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 
 const NewsRoute = React.lazy(() => import('../../routes/NewsRoute/NewsRoute'));
 const UserSavedNewsRoute = React.lazy(() =>
@@ -24,7 +25,7 @@ function App() {
           <PublicOnlyRoute exact path={'/'} component={Homepage} />
           <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
           <PublicOnlyRoute path={'/login'} component={LoginRoute} />
-          <Suspense fallback={<LoadingIndicator />}>
+          <Suspense fallback={<SoccerLoadingIndicator />}>
             <PrivateRoute path={'/saved-news'} component={UserSavedNewsRoute} />
             <Route path={'/news'} component={NewsRoute} />
           </Suspense>
