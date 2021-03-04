@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TokenService from '../services/token-service';
 
 const UserContext = React.createContext({
@@ -13,66 +13,51 @@ const UserContext = React.createContext({
 
 export default UserContext;
 
-export class UserProvider extends React.Component {
-  constructor(props) {
-    super(props);
-    const state = { user: {}, error: null };
+export const UserProvider = (props) => {
+  const [error, setError] = useState(null);
+  const [user, setUser] = useState({});
 
-    let jwtPayload = TokenService.parseAuthToken();
-
-    if (jwtPayload) {
-      state.user = {
-        id: jwtPayload.user_id,
-        name: jwtPayload.sub,
-        team: jwtPayload.team,
-      };
-    }
-    this.state = state;
-  }
-
-  setError = (error) => {
+  const setErrorHandler = (error) => {
     console.error(error);
-    this.setState({ error });
+    setError(error);
   };
 
-  clearError = () => {
-    this.setState({ error: null });
+  const clearErrorHandler = () => {
+    setError(null);
   };
 
-  setUser = (user) => {
-    this.setState({ user });
+  const setUserHandler = (user) => {
+    setUser(user);
   };
 
-  processLogin = (authToken) => {
+  const processLoginHandler = (authToken) => {
     TokenService.saveAuthToken(authToken);
     let jwtPayload = TokenService.parseAuthToken();
-    this.setUser({
-      id: jwtPayload.user_id,
+
+    setUser({
       name: jwtPayload.sub,
       team: jwtPayload.team,
     });
   };
 
-  processLogout = () => {
+  const processLogoutHandler = () => {
     TokenService.clearAuthToken();
-    this.setUser({});
+    setUser({});
   };
 
-  render() {
-    const value = {
-      user: this.state.user,
-      error: this.state.error,
-      setError: this.setError,
-      clearError: this.clearError,
-      setUser: this.setUser,
-      processLogin: this.processLogin,
-      processLogout: this.processLogout,
-    };
-
-    return (
-      <UserContext.Provider value={value}>
-        {this.props.children}
-      </UserContext.Provider>
-    );
-  }
-}
+  return (
+    <UserContext.Provider
+      value={{
+        user,
+        error,
+        setError: setErrorHandler,
+        clearError: clearErrorHandler,
+        setUser: setUserHandler,
+        processLogin: processLoginHandler,
+        processLogout: processLogoutHandler,
+      }}
+    >
+      {props.children}
+    </UserContext.Provider>
+  );
+};
