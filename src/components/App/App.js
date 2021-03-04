@@ -6,7 +6,6 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
 import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
-// import UserSavedNewsRoute from '../../routes/UserSavedNewsRoute/UserSavedNewsRoute';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
 import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
