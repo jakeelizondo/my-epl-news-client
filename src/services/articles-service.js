@@ -1,8 +1,8 @@
 import config from '../config';
 
 const ArticlesService = {
-  getTeamArticles(team) {
-    return fetch(`${config.API_ENDPOINT}/articles/${team}`, {
+  getTeamArticles(team, page = 1) {
+    return fetch(`${config.API_ENDPOINT}/articles/${team}?page=${page}`, {
       headers: {
         'content-type': 'application/json',
       },

@@ -7,7 +7,7 @@ const SmallArticleCard = (props) => {
       <div className="small-article-heading">
         <img
           src={props.article.image_url}
-          alt={`image-for-article-${props.article.id}`}
+          alt={`article-${props.article.id}`}
         />
         <div>
           <h4 className="small-article-title">{props.article.title}</h4>

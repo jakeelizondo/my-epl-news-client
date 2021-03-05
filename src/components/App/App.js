@@ -43,6 +43,7 @@ function App() {
           <Route component={NotFoundRoute} />
         </Switch>
       </main>
+      <footer>Copyright Jake Elizondo 2021</footer>
     </div>
   );
 }
