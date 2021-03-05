@@ -1,0 +1,13 @@
+.desktop-news-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+  flex: 1;
+  background-color: blue;
+}
+.right-side {
+  flex: 2;
+  background-color: green;
+}

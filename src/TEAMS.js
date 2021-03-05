@@ -21,6 +21,29 @@ const TEAMS = [
   { teamname: 'Wolverhampton Wanderers', teamcode: 'WOL' },
 ];
 
+const TEAMKEY = {
+  ARS: 'Arsenal',
+  AVL: 'Aston Villa',
+  BRI: 'Brighton and Hove Albion',
+  BUR: 'Burnley',
+  CHE: 'Chelsea',
+  CRY: 'Crystal Palace',
+  EVE: 'Everton',
+  FUL: 'Fulham',
+  LEE: 'Leeds United',
+  LEI: 'Leicester City',
+  LIV: 'Liverpool',
+  MCI: 'Manchester City',
+  MUN: 'Manchester United',
+  NEW: 'Newcastle United',
+  SOU: 'Southampton',
+  SHU: 'Sheffield United',
+  TOT: 'Tottenham Hotspur',
+  WBA: 'West Bromwich Albion',
+  WHU: 'West Ham United',
+  WOL: 'Wolverhampton Wanderers',
+};
+
 const TEAMCODES = [
   'ARS',
   'AVL',
@@ -44,4 +67,4 @@ const TEAMCODES = [
   'WOL',
 ];
 
-module.exports = { TEAMS, TEAMCODES };
+module.exports = { TEAMS, TEAMCODES, TEAMKEY };
