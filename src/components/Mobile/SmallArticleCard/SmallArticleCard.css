@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.small-article-heading h4 {
+  font-weight: 200;
+}
+
 .small-article-details {
   display: flex;
   flex-direction: row;
