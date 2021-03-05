@@ -5,7 +5,8 @@
 }
 
 .filter-bar {
-  background-color: #e90052;
+  background-image: url('../../../assets/epl-background.png');
+  background-size: cover;
   color: white;
   padding: 20px 0px 20px 0px;
 }
