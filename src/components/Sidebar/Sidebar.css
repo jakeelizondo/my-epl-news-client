@@ -81,3 +81,11 @@ a.menu-item {
   font-size: 25px;
   padding: 5px 0px;
 }
+
+.bm-menu a {
+  color: #38003c;
+}
+
+.bm-menu a:visited {
+  color: #38003c;
+}
