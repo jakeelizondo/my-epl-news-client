@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import NewsFilterBar from '../NewsFilterBar/NewsFilterBar';
 import SmallArticleCard from '../SmallArticleCard/SmallArticleCard';
 import ArticleList from '../../ArticleList/ArticleList';
 import { TEAMKEY } from '../../../TEAMS';
 import ArticlesService from '../../../services/articles-service';
 import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
+import TokenService from '../../../services/token-service';
 
 const MobileNewsPage = () => {
   const [team, setTeam] = useState('');
@@ -13,6 +14,22 @@ const MobileNewsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
   const [page, setPage] = useState();
+
+  // if the user is already logged in, use their jwt token to pre-populate news page for them
+  useEffect(() => {
+    if (TokenService.hasAuthToken()) {
+      let token = TokenService.getAuthToken();
+      let user = TokenService.parseAuthToken(token);
+      setPage(1);
+      setTeamCode(user.team);
+      setIsLoading(true);
+      ArticlesService.getTeamArticles(user.team, page).then((res) => {
+        setIsLoading(false);
+        setTeam(TEAMKEY[user.team]);
+        setArticles(res);
+      });
+    }
+  }, [page]);
 
   const handleFilter = useCallback(
     (filterTeamCode) => {
