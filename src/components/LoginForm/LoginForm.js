@@ -3,7 +3,7 @@ import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
-import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
+import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';
 
 const LoginForm = (props) => {
   const [error, setError] = useState(null);
@@ -53,8 +53,7 @@ const LoginForm = (props) => {
         />
       </div>
       <button>Login</button>
-      {isLoading && <SoccerLoadingIndicator />}
-      {/* {isLoading && <LoadingIndicator />} */}
+      {isLoading && <LoadingIndicator />}
     </form>
   );
 };
