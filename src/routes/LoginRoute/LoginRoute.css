@@ -6,5 +6,10 @@
 
 .login-page h2 {
   margin-bottom: 0;
-  color: #38003c;
+  text-align: center;
+  margin: 30px;
+  padding: 10px 0px;
+  background-color: #e90052;
+  width: 85%;
+  color: whitesmoke;
 }
