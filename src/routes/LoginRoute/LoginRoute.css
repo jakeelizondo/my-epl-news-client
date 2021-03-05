@@ -1,0 +1,10 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page h2 {
+  margin-bottom: 0;
+  color: #38003c;
+}

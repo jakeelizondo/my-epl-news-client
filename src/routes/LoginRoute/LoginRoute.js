@@ -9,6 +9,7 @@ const LoginRoute = (props) => {
 
   return (
     <div className="login-page">
+      <h2> Login to view your news</h2>
       <LoginForm onLoginSuccess={handleLoginAttempt} />
     </div>
   );
