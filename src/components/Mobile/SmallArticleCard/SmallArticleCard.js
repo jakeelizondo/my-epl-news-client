@@ -9,7 +9,7 @@ const SmallArticleCard = (props) => {
         <p>{props.article.source}</p>
         <p>{props.article.published_at}</p>
       </div>
-      <a href={props.article.article_url} target="_blank">
+      <a href={props.article.article_url} target="_blank" rel="noreferrer">
         Go to article
       </a>
     </div>
