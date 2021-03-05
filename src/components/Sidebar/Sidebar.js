@@ -62,12 +62,6 @@ const Sidebar = () => {
     content = (
       <React.Fragment>
         <div>
-          <Link className={'menu-item'} onClick={handleLogoutClick} to={'/'}>
-            Logout
-          </Link>
-        </div>
-        <br />
-        <div>
           <Link className={'menu-item'} onClick={handleCloseMenu} to={'/news'}>
             News
           </Link>
@@ -80,6 +74,12 @@ const Sidebar = () => {
             to={'/saved-news'}
           >
             My Saved
+          </Link>
+        </div>
+        <br />
+        <div>
+          <Link className={'menu-item'} onClick={handleLogoutClick} to={'/'}>
+            Logout
           </Link>
         </div>
       </React.Fragment>
