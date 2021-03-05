@@ -8,17 +8,29 @@ import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import NewsRoute from '../../routes/NewsRoute/NewsRoute';
-import './App.css';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
+import { useMediaQuery } from 'react-responsive';
+import './App.css';
+import Sidebar from '../Sidebar/Sidebar';
 
 const UserSavedNewsRoute = React.lazy(() =>
   import('../../routes/UserSavedNewsRoute/UserSavedNewsRoute')
 );
 
 function App() {
+  const isBigScreen = useMediaQuery({ query: '(min-device-width: 767px)' });
+  const isMobileDevice = useMediaQuery({
+    query: '(max-device-width: 767px)',
+  });
   return (
     <div className="App">
-      <Header />
+      {isBigScreen && <Header />}
+      {isMobileDevice && (
+        <div className="mobile-header">
+          <h1>My Epl News</h1>
+          <Sidebar />
+        </div>
+      )}
       <main>
         <Switch>
           <PublicOnlyRoute exact path={'/'} component={Homepage} />

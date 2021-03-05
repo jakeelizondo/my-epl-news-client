@@ -7,6 +7,18 @@
     background-color: #38003c;
   }
 
+  .mobile-header {
+    background-color: #38003c;
+    margin: 0;
+  }
+
+  .mobile-header h1 {
+    margin: 0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
   .header-title {
     font-size: 25px;
     color: white;
@@ -81,9 +93,10 @@
   }
 
   .header-nav a:hover {
-    background-color: #00ff85;
+    background-color: white;
+    color: #38003c;
     border-radius: 5px;
-    transition-duration: 500ms;
+    transition-duration: 700ms;
   }
 
   .header-nav a:visited {
