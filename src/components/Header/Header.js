@@ -36,7 +36,7 @@ const Header = (props) => {
   return (
     <header className={'header'}>
       <h1 className="header-title ">
-        <Link to="/">My Epl News</Link>
+        <Link to="/">My EPL News</Link>
       </h1>
       {content}
     </header>

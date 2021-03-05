@@ -1,17 +1,29 @@
 import React from 'react';
+import './SmallArticleCard.css';
 
 const SmallArticleCard = (props) => {
   return (
     <div className="small-article-card">
-      <h4 className="small-article-title">{props.article.title}</h4>
-      <div className="small-article-details">
-        <p>{props.article.author}</p>
-        <p>{props.article.source}</p>
-        <p>{props.article.published_at}</p>
+      <div className="small-article-heading">
+        <img
+          src={props.article.image_url}
+          alt={`image-for-article-${props.article.id}`}
+        />
+        <div>
+          <h4 className="small-article-title">{props.article.title}</h4>
+        </div>
       </div>
-      <a href={props.article.article_url} target="_blank" rel="noreferrer">
-        Go to article
-      </a>
+      <div className="small-article-details">
+        <div className="small-article-by-text">
+          <p className="small-article-author">{props.article.author}</p>
+          <p className="small-article-source">{props.article.source}</p>
+        </div>
+        <div className="small-article-link">
+          <a href={props.article.article_url} target="_blank" rel="noreferrer">
+            Visit
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

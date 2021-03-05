@@ -1,0 +1,58 @@
+.small-article-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.small-article-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.small-article-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+
+.small-article-link {
+  display: flex;
+  align-items: center;
+  background-color: #00ff85;
+  padding: 0px 15px;
+}
+
+.small-article-by-text {
+  border-left: 2px solid #e90052;
+  padding-left: 10px;
+}
+
+.small-article-details a {
+  text-decoration: none;
+
+  color: #38003c;
+}
+
+.small-article-heading img {
+  max-width: 50%;
+  margin-right: 10px;
+}
+
+.small-article-title {
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+}
+
+.small-article-author {
+  font-size: 15px;
+  margin: 0;
+}
+
+.small-article-source {
+  font-size: 12px;
+  margin: 0;
+}

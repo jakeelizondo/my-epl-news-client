@@ -27,7 +27,7 @@ function App() {
       {isBigScreen && <Header />}
       {isMobileDevice && (
         <div className="mobile-header">
-          <h1>My Epl News</h1>
+          <h1>My EPL News</h1>
           <Sidebar />
         </div>
       )}

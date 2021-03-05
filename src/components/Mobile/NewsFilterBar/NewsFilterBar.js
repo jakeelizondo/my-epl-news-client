@@ -7,7 +7,7 @@ const NewsFilterBar = (props) => {
   return (
     <div className="filter-bar">
       <div className="current-team">
-        <h3>Current Team: {props.team}</h3>
+        {props.team && <h3>Current Team: {props.team}</h3>}
       </div>
       <div className="filter-options">
         <label>Select Team:</label>
