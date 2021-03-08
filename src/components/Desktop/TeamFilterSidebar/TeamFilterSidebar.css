@@ -1,4 +1,6 @@
 .team-filter-sidebar {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  transition-duration: 1000ms;
 }

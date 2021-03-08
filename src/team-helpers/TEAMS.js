@@ -29,6 +29,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/arsenal-logo_jsn7h3.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#DB0007',
   },
   AVL: {
     teamname: 'Aston Villa',
@@ -37,6 +38,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/aston-villa-logo_cbfwas.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_skyblue_pied70.png',
+    bgHex: '#95BFE5',
   },
   BRI: {
     teamname: 'Brighton',
@@ -45,6 +47,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218593/my_epl_news/team_logos/brighton-logo_wgfm3l.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#0057B8',
   },
   BUR: {
     teamname: 'Burnley',
@@ -53,6 +56,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218593/my_epl_news/team_logos/burnley-logo_mh8h6j.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_burnley_eabs57.png',
+    bgHex: '#6C1D45',
   },
   CHE: {
     teamname: 'Chelsea',
@@ -61,6 +65,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/chelsea-logo_nyv6td.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#034694',
   },
   CRY: {
     teamname: 'Crystal Palace',
@@ -69,6 +74,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/crystal-palace-logo_uvux34.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#1B458F',
   },
   EVE: {
     teamname: 'Everton',
@@ -77,6 +83,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/everton-logo_g1m7hb.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#003399',
   },
   FUL: {
     teamname: 'Fulham',
@@ -85,6 +92,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218593/my_epl_news/team_logos/fulham-logo_ddz517.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#CC0000',
   },
   LEE: {
     teamname: 'Leeds United',
@@ -93,6 +101,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218670/my_epl_news/team_logos/leeds-united-logo_yfyacq.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#FFCD00',
   },
   LEI: {
     teamname: 'Leicester City',
@@ -101,6 +110,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/leicester-logo_msyafk.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
+    bgHex: '#0053A0',
   },
   LIV: {
     teamname: 'Liverpool',
@@ -109,6 +119,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/liverpool-logo_t3ivxx.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#00B2A9',
   },
   MCI: {
     teamname: 'Manchester City',
@@ -117,6 +128,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/man-city-logo_huqhdo.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_skyblue_pied70.png',
+    bgHex: '#6CABDD',
   },
   MUN: {
     teamname: 'Manchester United',
@@ -125,6 +137,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/man-united-logo_egah0z.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#DA291C',
   },
   NEW: {
     teamname: 'Newcastle United',
@@ -133,6 +146,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218545/my_epl_news/team_logos/newcastle-united-logo_cflvqu.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_black_bq0h7s.png',
+    bgHex: '#241F20',
   },
   SOU: {
     teamname: 'Southampton',
@@ -141,6 +155,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218545/my_epl_news/team_logos/southampton-logo_skqkvm.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#D71920',
   },
   SHU: {
     teamname: 'Sheffield United',
@@ -149,6 +164,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218593/my_epl_news/team_logos/sheffield-united-logo_y43aml.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_red_js9tq5.png',
+    bgHex: '#EE2737',
   },
   TOT: {
     teamname: 'Tottenham Hotspur',
@@ -159,6 +175,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615223601/my_epl_news/team_logos/totteanham-logo-white_d38nka.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_navy_tottenham_westbrom_dqhepa.png',
+    bgHex: '#132257',
   },
   WBA: {
     teamname: 'West Bromwich Albion',
@@ -167,6 +184,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218545/my_epl_news/team_logos/west-bromwich-logo_fz1thk.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_navy_tottenham_westbrom_dqhepa.png',
+    bgHex: '#122F67',
   },
   WHU: {
     teamname: 'West Ham United',
@@ -175,6 +193,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/west-ham-united-logo_u2cii6.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_maroon_westham_wx5itr.png',
+    bgHex: '#7A263A',
   },
   WOL: {
     teamname: 'Wolverhampton Wanderers',
@@ -183,6 +202,7 @@ const TEAMKEY = {
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218593/my_epl_news/team_logos/wolverhampton-wanderers-logo_tkwzag.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_wolves_goldish_yluth7.png',
+    bgHex: '#FDB913',
   },
 };
 

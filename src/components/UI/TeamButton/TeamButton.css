@@ -39,7 +39,6 @@
 }
 
 .team-button:hover {
-  background-color: #e90052;
   box-shadow: 0 0 0 3px white;
   cursor: pointer;
   color: white;

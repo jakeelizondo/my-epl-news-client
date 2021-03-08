@@ -5,7 +5,7 @@
 
 .left-side {
   flex: 1;
-  background-color: #e90052;
+  display: flex;
 }
 .right-side {
   flex: 3;
