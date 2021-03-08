@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TEAMS } from '../../TEAMS';
+import { TEAMS } from '../../team-helpers/TEAMS';
 import AuthApiService from '../../services/auth-api-service';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
 import LoadingIndicator from '../UI/LoadingIndicator/LoadingIndicator';

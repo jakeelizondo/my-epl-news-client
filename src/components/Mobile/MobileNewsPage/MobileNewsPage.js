@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import NewsFilterBar from '../NewsFilterBar/NewsFilterBar';
 import SmallArticleCard from '../SmallArticleCard/SmallArticleCard';
 import ArticleList from '../../ArticleList/ArticleList';
-import { TEAMKEY } from '../../../TEAMS';
+import { TEAMKEY } from '../../../team-helpers/TEAMS';
 import ArticlesService from '../../../services/articles-service';
 import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import TokenService from '../../../services/token-service';
@@ -25,7 +25,7 @@ const MobileNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team, page).then((res) => {
         setIsLoading(false);
-        setTeam(TEAMKEY[user.team]);
+        setTeam(TEAMKEY[user.team].teamcode);
         setArticles(res);
       });
     }
@@ -38,7 +38,7 @@ const MobileNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(filterTeamCode, page).then((res) => {
         setIsLoading(false);
-        setTeam(TEAMKEY[filterTeamCode]);
+        setTeam(TEAMKEY[filterTeamCode].teamcode);
         setArticles(res);
       });
     },

@@ -5,7 +5,7 @@
 }
 
 .filter-bar {
-  background-image: url('../../../assets/epl-background.png');
+  background-image: url('../../../assets/backgrounds/epl-background.png');
   background-size: cover;
   color: white;
   padding: 20px 0px 20px 0px;
@@ -47,4 +47,21 @@
   font-size: 15px;
   font-weight: 600;
   margin: 0px 0px 0px 20px;
+}
+
+.current-team {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-team img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: block;
+  max-width: 130px;
+  max-height: 55px;
+  width: auto;
+  height: auto;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TEAMS } from '../../../TEAMS';
+import { TEAMKEY, TEAMS } from '../../../team-helpers/TEAMS';
 import './NewsFilterBar.css';
 
 const NewsFilterBar = (props) => {
@@ -7,7 +7,10 @@ const NewsFilterBar = (props) => {
   return (
     <div className="filter-bar">
       <div className="current-team">
-        {props.team && <h3>Current Team: {props.team}</h3>}
+        {props.team && <h3>{TEAMKEY[props.team].teamname}</h3>}
+        {props.team && (
+          <img src={TEAMKEY[props.team].logoUrl} alt={props.team} />
+        )}
       </div>
       <div className="filter-options">
         <label htmlFor="filter-bar-team-select">Select Team:</label>
