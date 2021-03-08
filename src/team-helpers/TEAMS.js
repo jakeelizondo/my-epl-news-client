@@ -63,6 +63,8 @@ const TEAMKEY = {
     teamcode: 'EVE',
     logoUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218544/my_epl_news/team_logos/everton-logo_g1m7hb.png',
+    bgUrl:
+      'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_blue_vurjhr.png',
   },
   FUL: {
     teamname: 'Fulham',
