@@ -45,7 +45,12 @@ const NewsFilterBar = (props) => {
               </option>
             ))}
           </select>
-          <button onClick={() => props.handleFilter(filterTeam)}>Filter</button>
+          <button
+            disabled={!filterTeam}
+            onClick={() => props.handleFilter(filterTeam)}
+          >
+            Filter
+          </button>
         </div>
       </div>
     </div>

@@ -1,0 +1,4 @@
+.team-filter-sidebar {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,15 @@
+@media all and (max-width: 767px) {
+  .no-news-message {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .no-news-message {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 40px;
+  }
+}

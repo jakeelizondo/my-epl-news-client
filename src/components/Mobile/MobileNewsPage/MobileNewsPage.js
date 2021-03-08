@@ -6,6 +6,7 @@ import { TEAMKEY } from '../../../team-helpers/TEAMS';
 import ArticlesService from '../../../services/articles-service';
 import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import TokenService from '../../../services/token-service';
+import EmptyNewsMessage from '../../UI/EmptyNewsMessage/EmptyNewsMessage';
 
 const MobileNewsPage = () => {
   const [team, setTeam] = useState('');
@@ -73,6 +74,7 @@ const MobileNewsPage = () => {
     <div className="mobile-news-page">
       <NewsFilterBar handleFilter={handleFilter} team={team} />
       {isLoading && <SoccerLoadingIndicator />}
+      {!team && <EmptyNewsMessage />}
       {page && (
         <ArticleList
           handleNextClick={handleNextClick}
