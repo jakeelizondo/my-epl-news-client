@@ -11,7 +11,15 @@ export default function TeamButton(props) {
         <p>{props.team.teamname}</p>
       </div>
       <div className="team-button-img">
-        <img src={props.team.logoUrl} alt={props.team.teamname} />
+        {props.team.teamcode === 'TOT' && props.isActive && (
+          <img src={props.team.logoURLWhite} alt={props.team.teamname} />
+        )}
+        {props.team.teamcode === 'TOT' && !props.isActive && (
+          <img src={props.team.logoUrl} alt={props.team.teamname} />
+        )}
+        {props.team.teamcode !== 'TOT' && (
+          <img src={props.team.logoUrl} alt={props.team.teamname} />
+        )}
       </div>
     </div>
   );
