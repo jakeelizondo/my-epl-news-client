@@ -20,8 +20,11 @@ const NewsFilterBar = (props) => {
     <div className="filter-bar" style={filterBarStyle}>
       <div className="current-team">
         {props.team && <h3>{TEAMKEY[props.team].teamname}</h3>}
-        {props.team && (
+        {props.team && props.team !== 'TOT' && (
           <img src={TEAMKEY[props.team].logoUrl} alt={props.team} />
+        )}
+        {props.team && props.team === 'TOT' && (
+          <img src={TEAMKEY[props.team].logoURLWhite} alt={props.team} />
         )}
       </div>
       <div className="filter-options">

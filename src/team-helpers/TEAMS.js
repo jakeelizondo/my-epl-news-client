@@ -155,6 +155,8 @@ const TEAMKEY = {
     teamcode: 'TOT',
     logoUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615218545/my_epl_news/team_logos/tottenham-logo_dfiglj.png',
+    logoURLWhite:
+      'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615223601/my_epl_news/team_logos/totteanham-logo-white_d38nka.png',
     bgUrl:
       'https://res.cloudinary.com/dyz6qaw5e/image/upload/v1615222306/my_epl_news/team_backgrounds/background_navy_tottenham_westbrom_dqhepa.png',
   },
