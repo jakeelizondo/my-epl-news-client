@@ -60,6 +60,11 @@
   color: #38003c;
 }
 
+.large-article-img {
+  display: flex;
+  align-items: center;
+}
+
 .large-article-card img {
   display: block;
   max-width: 300px;

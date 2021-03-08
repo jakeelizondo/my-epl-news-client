@@ -9,10 +9,12 @@ const LargeArticleCard = (props) => {
           <h4 className="large-article-title">{props.article.title}</h4>
           <p>{props.article.description}</p>
         </div>
-        <img
-          src={props.article.image_url}
-          alt={`article-${props.article.id}`}
-        />
+        <div className="large-article-img">
+          <img
+            src={props.article.image_url}
+            alt={`article-${props.article.id}`}
+          />
+        </div>
       </div>
       <div className="large-article-details">
         <div className="large-article-by-text">
