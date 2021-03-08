@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import Header from '../Header/Header';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
@@ -27,7 +27,9 @@ function App() {
       {isBigScreen && <Header />}
       {isMobileDevice && (
         <div className="mobile-header">
-          <h1>My EPL News</h1>
+          <h1>
+            <Link to="/">My EPL News</Link>
+          </h1>
           <Sidebar />
         </div>
       )}
