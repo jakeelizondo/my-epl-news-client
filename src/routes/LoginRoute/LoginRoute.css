@@ -4,12 +4,12 @@
   align-items: center;
 }
 
-.login-page h2 {
+.login-heading {
   margin-bottom: 0;
   text-align: center;
   margin: 30px;
   padding: 10px 0px;
   background-color: #e90052;
   width: 85%;
-  color: whitesmoke;
+  color: white;
 }

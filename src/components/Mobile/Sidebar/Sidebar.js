@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
-import TokenService from '../../services/token-service';
-import UserContext from '../../contexts/UserContext';
+import TokenService from '../../../services/token-service';
+import UserContext from '../../../contexts/UserContext';
 import './Sidebar.css';
 
 const Sidebar = () => {

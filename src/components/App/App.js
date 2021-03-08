@@ -11,7 +11,7 @@ import NewsRoute from '../../routes/NewsRoute/NewsRoute';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import { useMediaQuery } from 'react-responsive';
 import './App.css';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Mobile/Sidebar/Sidebar';
 
 const UserSavedNewsRoute = React.lazy(() =>
   import('../../routes/UserSavedNewsRoute/UserSavedNewsRoute')
