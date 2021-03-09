@@ -37,7 +37,7 @@ const DesktopNewsPage = () => {
           setError(res.error.message);
         });
     }
-  }, [page]);
+  }, []);
 
   const clear = () => {
     setError(null);
