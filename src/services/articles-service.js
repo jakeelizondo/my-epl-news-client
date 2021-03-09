@@ -29,12 +29,14 @@ const ArticlesService = {
     });
   },
 
-  deleteSavedArticle(id) {
+  deleteSavedArticle(article_id) {
     return fetch(`${config.API_ENDPOINT}/user/articles`, {
+      method: 'DELETE',
       headers: {
         'content-type': 'application/json',
         Authorization: `Bearer ${TokenService.getAuthToken()}`,
       },
+      body: JSON.stringify({ article_id }),
     }).then((response) => {
       if (!response.ok) {
         return response.json().then((error) => Promise.reject(error));

@@ -70,6 +70,7 @@ const DesktopNewsPage = () => {
     ArticlesService.getTeamArticles(teamCode, page - 1)
       .then((res) => {
         setPage(page - 1);
+        window.scrollTo(0, 0);
         setIsLoading(false);
         setArticles(res);
       })
@@ -87,6 +88,7 @@ const DesktopNewsPage = () => {
           setIsEnd(true);
         }
         setPage(page + 1);
+        window.scrollTo(0, 0);
         setIsLoading(false);
         setArticles(res);
       })

@@ -3,6 +3,7 @@ import ArticlesService from '../../services/articles-service';
 import ErrorModal from '../../components/UI/ErrorModal/ErrorModal';
 import SoccerLoadingIndicator from '../../components/UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import SavedArticleCard from '../../components/SavedArticleCard.js/SavedArticleCard';
+import './UserSavedNewsRoute.css';
 
 const UserSavedNewsRoute = (props) => {
   const [userArticles, setUserArticles] = useState([]);
@@ -27,9 +28,21 @@ const UserSavedNewsRoute = (props) => {
     setIsLoading(false);
   };
 
-  const handleDeleteSaved = useCallback((id) => {
-    console.log('deleting', id);
-  }, []);
+  const handleDeleteSaved = useCallback(
+    (id) => {
+      setIsLoading(true);
+      console.log('deleting', id);
+      ArticlesService.deleteSavedArticle(id)
+        .then((response) => {
+          setIsLoading(false);
+          setUserArticles(userArticles.filter((article) => article.id !== id));
+        })
+        .catch((res) => {
+          setError(res.error.message);
+        });
+    },
+    [userArticles]
+  );
 
   const makeSavedArticles = () => {
     return userArticles.map((article) => {
@@ -45,7 +58,7 @@ const UserSavedNewsRoute = (props) => {
   };
 
   return (
-    <div>
+    <div className="user-saved-news-page">
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
       {isLoading && <SoccerLoadingIndicator />}
       {makeSavedArticles()}

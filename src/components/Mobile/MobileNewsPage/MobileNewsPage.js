@@ -50,6 +50,7 @@ const MobileNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(filterTeamCode, page)
         .then((res) => {
+          window.scrollTo(0, 0);
           setIsLoading(false);
           setTeam(TEAMKEY[filterTeamCode].teamcode);
           setArticles(res);
@@ -68,6 +69,7 @@ const MobileNewsPage = () => {
     ArticlesService.getTeamArticles(teamCode, page - 1)
       .then((res) => {
         setPage(page - 1);
+        window.scrollTo(0, 0);
         setIsLoading(false);
         setArticles(res);
       })
@@ -85,6 +87,7 @@ const MobileNewsPage = () => {
           setIsEnd(true);
         }
         setPage(page + 1);
+        window.scrollTo(0, 0);
         setIsLoading(false);
         setArticles(res);
       })

@@ -3,7 +3,7 @@ import MobileNewsPage from '../../components/Mobile/MobileNewsPage/MobileNewsPag
 import DesktopNewsPage from '../../components/Desktop/DesktopNewsPage/DesktopNewsPage';
 
 const NewsRoute = (props) => {
-  const isBigScreen = useMediaQuery({ query: '(min-device-width: 767px)' });
+  const isBigScreen = useMediaQuery({ query: '(min-width: 767px)' });
 
   return isBigScreen ? (
     <DesktopNewsPage {...props} />
