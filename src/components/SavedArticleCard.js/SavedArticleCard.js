@@ -20,7 +20,10 @@ const SavedArticleCard = (props) => {
           <p className="saved-article-source">{props.article.source}</p>
         </div>
         <div className="saved-article-buttons">
-          <button className="saved-article-delete">
+          <button
+            onClick={() => props.handleDeleteSaved(props.id)}
+            className="saved-article-delete"
+          >
             <img src={deleteIcon} alt="delete" />
           </button>
           <a

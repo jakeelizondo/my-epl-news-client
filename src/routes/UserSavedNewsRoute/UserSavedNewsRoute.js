@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ArticlesService from '../../services/articles-service';
 import ErrorModal from '../../components/UI/ErrorModal/ErrorModal';
 import SoccerLoadingIndicator from '../../components/UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
@@ -27,11 +27,23 @@ const UserSavedNewsRoute = (props) => {
     setIsLoading(false);
   };
 
+  const handleDeleteSaved = useCallback((id) => {
+    console.log('deleting', id);
+  }, []);
+
   const makeSavedArticles = () => {
     return userArticles.map((article) => {
-      return <SavedArticleCard key={article.id} article={article} />;
+      return (
+        <SavedArticleCard
+          handleDeleteSaved={handleDeleteSaved}
+          key={article.id}
+          id={article.id}
+          article={article}
+        />
+      );
     });
   };
+
   return (
     <div>
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}

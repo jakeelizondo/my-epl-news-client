@@ -28,6 +28,20 @@ const ArticlesService = {
       return response.json();
     });
   },
+
+  deleteSavedArticle(id) {
+    return fetch(`${config.API_ENDPOINT}/user/articles`, {
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
+      },
+    }).then((response) => {
+      if (!response.ok) {
+        return response.json().then((error) => Promise.reject(error));
+      }
+      return response.json();
+    });
+  },
 };
 
 export default ArticlesService;
