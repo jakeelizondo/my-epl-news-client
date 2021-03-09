@@ -41,7 +41,7 @@ const MobileNewsPage = () => {
           setError(res.error.message);
         });
     }
-  }, [page]);
+  }, []);
 
   const handleFilter = useCallback(
     (filterTeamCode) => {
