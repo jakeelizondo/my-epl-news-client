@@ -21,11 +21,15 @@ const LargeArticleCard = (props) => {
           <p className="large-article-author">{props.article.author}</p>
           <p className="large-article-source">{props.article.source}</p>
         </div>
-        <div className="large-article-link">
-          <a href={props.article.article_url} target="_blank" rel="noreferrer">
-            Visit
-          </a>
-        </div>
+
+        <a
+          className="large-article-link"
+          href={props.article.article_url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit
+        </a>
       </div>
     </div>
   );

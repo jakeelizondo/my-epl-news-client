@@ -48,6 +48,13 @@
   padding: 0px 15px;
   font-size: 20px;
   min-height: 35px;
+  transition-duration: 700ms;
+}
+
+.large-article-link:hover {
+  background-color: #38003c;
+  color: white;
+  transition-duration: 700ms;
 }
 
 .large-article-by-text {

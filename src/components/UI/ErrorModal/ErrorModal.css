@@ -18,6 +18,18 @@
     border-radius: 7px 7px 0 0;
   }
 
+  .error-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .error-modal img {
+    max-width: 20%;
+  }
+
   .error-modal p {
     padding: 1rem;
   }
@@ -57,6 +69,18 @@
     background: #e90052;
     color: white;
     border-radius: 7px 7px 0 0;
+  }
+
+  .error-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .error-modal img {
+    max-width: 20%;
   }
 
   .error-modal p {

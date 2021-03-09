@@ -45,7 +45,11 @@
 }
 
 .small-article-heading img {
-  max-width: 50%;
+  display: block;
+  max-width: 130px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
   margin-right: 10px;
 }
 
