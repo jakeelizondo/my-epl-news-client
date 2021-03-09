@@ -29,6 +29,7 @@
 
   .pagination-bar button {
     background-color: #04f5ff;
+    cursor: pointer;
     padding: 5px 10px;
     border: none;
     font-size: 20px;

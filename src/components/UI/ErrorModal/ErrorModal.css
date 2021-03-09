@@ -40,6 +40,16 @@
     padding: 0 0.5rem;
   }
 
+  .error-modal__actions button {
+    background-color: #00ff85;
+    padding: 0px 15px;
+    margin: 10px;
+    font-size: 20px;
+    min-height: 35px;
+    transition-duration: 700ms;
+    border: none;
+  }
+
   .backdrop {
     position: fixed;
     top: 0;
@@ -91,6 +101,23 @@
     display: flex;
     justify-content: flex-end;
     padding: 0 0.5rem;
+  }
+
+  .error-modal__actions button {
+    background-color: #00ff85;
+    cursor: pointer;
+    padding: 0px 15px;
+    margin: 10px;
+    font-size: 20px;
+    min-height: 35px;
+    transition-duration: 700ms;
+    border: none;
+  }
+
+  .error-modal__actions button:hover {
+    background-color: #38003c;
+    color: white;
+    transition-duration: 700ms;
   }
 
   .backdrop {
