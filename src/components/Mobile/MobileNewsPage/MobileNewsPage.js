@@ -31,7 +31,7 @@ const MobileNewsPage = () => {
       setPage(1);
       setTeamCode(user.team);
       setIsLoading(true);
-      ArticlesService.getTeamArticles(user.team, page)
+      ArticlesService.getTeamArticles(user.team)
         .then((res) => {
           setIsLoading(false);
           setTeam(TEAMKEY[user.team].teamcode);
