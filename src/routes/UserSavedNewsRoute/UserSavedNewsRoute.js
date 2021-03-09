@@ -35,10 +35,7 @@ const UserSavedNewsRoute = (props) => {
       ArticlesService.deleteSavedArticle(id)
         .then(() => {
           setIsLoading(false);
-          console.log(id);
-          console.log(userArticles);
           let newArticles = userArticles.filter((article) => article.id !== id);
-          console.log(newArticles);
           setUserArticles(newArticles);
         })
         .catch((res) => {
@@ -64,11 +61,13 @@ const UserSavedNewsRoute = (props) => {
 
   return (
     <div className="user-saved-news-page">
-      <h2>Saved Articles</h2>
+      <h2>
+        {userArticles.length < 1
+          ? "Looks like you don't have any saved articles!"
+          : 'Saved Articles'}
+      </h2>
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
-      {userArticles.length < 1 && (
-        <p>Looks like you don't have any saved articles!</p>
-      )}
+
       {isLoading && <SoccerLoadingIndicator />}
       {makeSavedArticles()}
     </div>

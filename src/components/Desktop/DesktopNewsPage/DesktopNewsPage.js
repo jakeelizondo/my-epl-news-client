@@ -44,6 +44,17 @@ const DesktopNewsPage = () => {
     setIsLoading(false);
   };
 
+  const handleArticleSave = useCallback((id) => {
+    setIsLoading(true);
+    ArticlesService.saveArticle(id)
+      .then(() => {
+        setIsLoading(false);
+      })
+      .catch((res) => {
+        setError(res.error.message);
+      });
+  }, []);
+
   const handleFilter = useCallback(
     (filterTeamCode) => {
       window.scrollTo(0, 0);
@@ -114,7 +125,11 @@ const DesktopNewsPage = () => {
         >
           {!isEnd &&
             articles.map((article) => (
-              <LargeArticleCard key={article.id} article={article} />
+              <LargeArticleCard
+                key={article.id}
+                article={article}
+                handleArticleSave={handleArticleSave}
+              />
             ))}
         </ArticleList>
       )}

@@ -1,4 +1,5 @@
 import React from 'react';
+import TokenService from '../../../services/token-service';
 import './LargeArticleCard.css';
 
 const LargeArticleCard = (props) => {
@@ -21,15 +22,24 @@ const LargeArticleCard = (props) => {
           <p className="large-article-author">{props.article.author}</p>
           <p className="large-article-source">{props.article.source}</p>
         </div>
-
-        <a
-          className="large-article-link"
-          href={props.article.article_url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Visit
-        </a>
+        <div className="large-article-buttons">
+          {TokenService.hasAuthToken() ? (
+            <button
+              onClick={() => props.handleArticleSave(props.article.id)}
+              className="large-article-save"
+            >
+              Save
+            </button>
+          ) : null}
+          <a
+            className="large-article-link"
+            href={props.article.article_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit
+          </a>
+        </div>
       </div>
     </div>
   );

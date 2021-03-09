@@ -43,6 +43,21 @@ const ArticlesService = {
       }
     });
   },
+
+  saveArticle(article_id) {
+    return fetch(`${config.API_ENDPOINT}/user/articles`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({ article_id }),
+    }).then((response) => {
+      if (!response.ok) {
+        return response.json().then((error) => Promise.reject(error));
+      }
+    });
+  },
 };
 
 export default ArticlesService;

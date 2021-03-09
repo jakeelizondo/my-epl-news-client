@@ -95,3 +95,32 @@
   font-size: 15px;
   margin: 0;
 }
+
+.large-article-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.large-article-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #00ff85;
+  color: #38003c;
+  padding: 0px 15px;
+  margin-right: 30px;
+
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  min-height: 50px;
+  transition-duration: 700ms;
+  text-decoration: none;
+}
+
+.large-article-save:hover {
+  background-color: #38003c;
+  color: white;
+  transition-duration: 700ms;
+}
