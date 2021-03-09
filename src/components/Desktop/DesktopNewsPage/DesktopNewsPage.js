@@ -108,6 +108,23 @@ const DesktopNewsPage = () => {
       });
   }, [teamCode, page]);
 
+  const generateArticles = () => {
+    if (TokenService.hasAuthToken()) {
+      return articles.map((article) => (
+        <LargeArticleCard
+          key={article.id}
+          article={article}
+          handleArticleSave={handleArticleSave}
+          loggedIn={true}
+        />
+      ));
+    } else {
+      return articles.map((article) => (
+        <LargeArticleCard key={article.id} article={article} />
+      ));
+    }
+  };
+
   return (
     <div className="desktop-news-page">
       {isLoading && <SoccerLoadingIndicator />}
@@ -123,14 +140,7 @@ const DesktopNewsPage = () => {
           handlePrevClick={handlePrevClick}
           atEnd={isEnd}
         >
-          {!isEnd &&
-            articles.map((article) => (
-              <LargeArticleCard
-                key={article.id}
-                article={article}
-                handleArticleSave={handleArticleSave}
-              />
-            ))}
+          {!isEnd && generateArticles()}
         </ArticleList>
       )}
     </div>

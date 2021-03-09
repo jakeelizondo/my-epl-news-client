@@ -62,6 +62,34 @@ const MobileNewsPage = () => {
     [page]
   );
 
+  const generateArticles = () => {
+    if (TokenService.hasAuthToken()) {
+      return articles.map((article) => (
+        <SmallArticleCard
+          key={article.id}
+          article={article}
+          handleArticleSave={handleArticleSave}
+          loggedIn={true}
+        />
+      ));
+    } else {
+      return articles.map((article) => (
+        <SmallArticleCard key={article.id} article={article} />
+      ));
+    }
+  };
+
+  const handleArticleSave = useCallback((id) => {
+    setIsLoading(true);
+    ArticlesService.saveArticle(id)
+      .then(() => {
+        setIsLoading(false);
+      })
+      .catch((res) => {
+        setError(res.error.message);
+      });
+  }, []);
+
   const handlePrevClick = useCallback(() => {
     setIsLoading(true);
     setIsEnd(false);
@@ -109,10 +137,7 @@ const MobileNewsPage = () => {
           handlePrevClick={handlePrevClick}
           atEnd={isEnd}
         >
-          {!isEnd &&
-            articles.map((article) => (
-              <SmallArticleCard key={article.id} article={article} />
-            ))}
+          {!isEnd && generateArticles()}
         </ArticleList>
       )}
     </div>
