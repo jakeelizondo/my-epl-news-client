@@ -5,3 +5,13 @@
   align-items: center;
   margin-top: 10px;
 }
+
+.user-saved-news-page h2 {
+  margin-bottom: 0;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 10px 0px;
+  background-color: #e90052;
+  width: 85%;
+  color: white;
+}

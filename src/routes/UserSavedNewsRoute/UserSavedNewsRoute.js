@@ -31,13 +31,18 @@ const UserSavedNewsRoute = (props) => {
   const handleDeleteSaved = useCallback(
     (id) => {
       setIsLoading(true);
-      console.log('deleting', id);
+
       ArticlesService.deleteSavedArticle(id)
-        .then((response) => {
+        .then(() => {
           setIsLoading(false);
-          setUserArticles(userArticles.filter((article) => article.id !== id));
+          console.log(id);
+          console.log(userArticles);
+          let newArticles = userArticles.filter((article) => article.id !== id);
+          console.log(newArticles);
+          setUserArticles(newArticles);
         })
         .catch((res) => {
+          setIsLoading(false);
           setError(res.error.message);
         });
     },
@@ -59,7 +64,11 @@ const UserSavedNewsRoute = (props) => {
 
   return (
     <div className="user-saved-news-page">
+      <h2>Saved Articles</h2>
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
+      {userArticles.length < 1 && (
+        <p>Looks like you don't have any saved articles!</p>
+      )}
       {isLoading && <SoccerLoadingIndicator />}
       {makeSavedArticles()}
     </div>

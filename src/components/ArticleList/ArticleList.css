@@ -19,6 +19,7 @@
 @media all and (min-width: 767px) {
   .article-list {
     margin: 0% 3%;
+    flex: 3;
   }
   .pagination-bar {
     display: flex;

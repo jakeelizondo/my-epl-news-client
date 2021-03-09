@@ -99,27 +99,25 @@ const DesktopNewsPage = () => {
 
   return (
     <div className="desktop-news-page">
+      {isLoading && <SoccerLoadingIndicator />}
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
-      <div className="left-side">
-        <TeamFilterSidebar handleFilter={handleFilter} currTeam={teamCode} />
-      </div>
-      <div className="right-side">
-        {isLoading && <SoccerLoadingIndicator />}
-        {!team && <EmptyNewsMessage />}
-        {page && (
-          <ArticleList
-            handleNextClick={handleNextClick}
-            page={page}
-            handlePrevClick={handlePrevClick}
-            atEnd={isEnd}
-          >
-            {!isEnd &&
-              articles.map((article) => (
-                <LargeArticleCard key={article.id} article={article} />
-              ))}
-          </ArticleList>
-        )}
-      </div>
+
+      <TeamFilterSidebar handleFilter={handleFilter} currTeam={teamCode} />
+
+      {!team && <EmptyNewsMessage />}
+      {page && (
+        <ArticleList
+          handleNextClick={handleNextClick}
+          page={page}
+          handlePrevClick={handlePrevClick}
+          atEnd={isEnd}
+        >
+          {!isEnd &&
+            articles.map((article) => (
+              <LargeArticleCard key={article.id} article={article} />
+            ))}
+        </ArticleList>
+      )}
     </div>
   );
 };

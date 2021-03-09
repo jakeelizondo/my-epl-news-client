@@ -41,7 +41,6 @@ const ArticlesService = {
       if (!response.ok) {
         return response.json().then((error) => Promise.reject(error));
       }
-      return response.json();
     });
   },
 };
