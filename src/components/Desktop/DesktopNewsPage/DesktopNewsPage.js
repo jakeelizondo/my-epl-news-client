@@ -25,6 +25,7 @@ const DesktopNewsPage = () => {
       let token = TokenService.getAuthToken();
       let user = TokenService.parseAuthToken(token);
       setPage(1);
+      setIsEnd(false);
       setTeamCode(user.team);
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team)
@@ -58,6 +59,7 @@ const DesktopNewsPage = () => {
   const handleFilter = useCallback(
     (filterTeamCode) => {
       window.scrollTo(0, 0);
+      setIsEnd(false);
       setPage(1);
       setTeamCode(filterTeamCode);
       setIsLoading(true);

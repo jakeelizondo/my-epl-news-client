@@ -30,6 +30,7 @@ const MobileNewsPage = () => {
       let user = TokenService.parseAuthToken(token);
       setPage(1);
       setTeamCode(user.team);
+      setIsEnd(false);
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team)
         .then((res) => {
@@ -47,6 +48,7 @@ const MobileNewsPage = () => {
     (filterTeamCode) => {
       setPage(1);
       setTeamCode(filterTeamCode);
+      setIsEnd(false);
       setIsLoading(true);
       ArticlesService.getTeamArticles(filterTeamCode, page)
         .then((res) => {
