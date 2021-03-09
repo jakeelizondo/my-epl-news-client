@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import LargeArticleCard from '../../components/Desktop/LargeArticleCard/LargeArticleCard';
 import ArticlesService from '../../services/articles-service';
 import ErrorModal from '../../components/UI/ErrorModal/ErrorModal';
 import SoccerLoadingIndicator from '../../components/UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
+import SavedArticleCard from '../../components/SavedArticleCard.js/SavedArticleCard';
 
 const UserSavedNewsRoute = (props) => {
   const [userArticles, setUserArticles] = useState([]);
@@ -29,7 +29,7 @@ const UserSavedNewsRoute = (props) => {
 
   const makeSavedArticles = () => {
     return userArticles.map((article) => {
-      return <LargeArticleCard article={article} />;
+      return <SavedArticleCard key={article.id} article={article} />;
     });
   };
   return (

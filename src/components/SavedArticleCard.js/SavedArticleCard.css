@@ -1,0 +1,199 @@
+@media all and (max-width: 767px) {
+  .saved-article-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    margin: 0px 15px;
+    border-top: 1px solid #38003c;
+    border-bottom: 1px solid #38003c;
+  }
+
+  .saved-article-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .saved-article-heading h4 {
+    font-weight: 200;
+  }
+
+  .saved-article-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0px 5px 0px;
+  }
+
+  .saved-article-link {
+    display: flex;
+    align-items: center;
+    background-color: #00ff85;
+    padding: 0px 15px;
+    min-height: 35px;
+  }
+
+  .saved-article-by-text {
+    border-left: 2px solid #e90052;
+    padding-left: 10px;
+  }
+
+  .saved-article-details a {
+    text-decoration: none;
+
+    color: #38003c;
+  }
+
+  .saved-article-heading img {
+    display: block;
+    max-width: 130px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .saved-article-title {
+    text-align: left;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .saved-article-author {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .saved-article-source {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .saved-article-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    margin: 0px 15px;
+    border-top: 1px solid #38003c;
+    border-bottom: 1px solid #38003c;
+  }
+
+  .saved-article-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .saved-article-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .saved-article-content p {
+    padding: 0px 20px;
+  }
+
+  .saved-article-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .saved-article-heading h4 {
+    font-weight: 200;
+  }
+
+  .saved-article-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3%;
+  }
+
+  .saved-article-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00ff85;
+    width: 90px;
+    font-size: 20px;
+    min-height: 50px;
+    color: #38003c;
+    transition-duration: 700ms;
+    text-decoration: none;
+  }
+
+  .saved-article-link:hover {
+    background-color: #38003c;
+    color: white;
+    transition-duration: 700ms;
+  }
+
+  .saved-article-by-text {
+    border-left: 2px solid #e90052;
+    padding-left: 10px;
+  }
+
+  .saved-article-img {
+    display: flex;
+    align-items: center;
+  }
+
+  .saved-article-card img {
+    display: block;
+    max-width: 300px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+  }
+
+  .saved-article-title {
+    text-align: center;
+    font-size: 25px;
+    margin: 2% 5%;
+  }
+
+  .saved-article-author {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .saved-article-source {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .saved-article-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .saved-article-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #e90052;
+    color: white;
+    padding: 0px 15px;
+    margin-right: 30px;
+    width: 60px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    min-height: 50px;
+    transition-duration: 700ms;
+    text-decoration: none;
+  }
+
+  .saved-article-delete:hover {
+    background-color: #38003c;
+    color: white;
+    transition-duration: 700ms;
+  }
+}
