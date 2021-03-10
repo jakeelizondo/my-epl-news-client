@@ -30,7 +30,9 @@ function App() {
           <h1>
             <Link to="/">My EPL News</Link>
           </h1>
-          <Sidebar />
+          <div>
+            <Sidebar />
+          </div>
         </div>
       )}
       <main>
