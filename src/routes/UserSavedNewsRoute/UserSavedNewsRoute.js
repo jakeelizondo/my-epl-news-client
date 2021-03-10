@@ -69,7 +69,7 @@ const UserSavedNewsRoute = (props) => {
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
 
       {isLoading && <SoccerLoadingIndicator />}
-      {makeSavedArticles()}
+      <div className="saved-article-list">{makeSavedArticles()}</div>
     </div>
   );
 };

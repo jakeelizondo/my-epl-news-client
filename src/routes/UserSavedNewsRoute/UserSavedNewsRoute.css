@@ -1,7 +1,6 @@
 .user-saved-news-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 10px 0px;
 }
@@ -14,4 +13,10 @@
   background-color: #e90052;
   width: 85%;
   color: white;
+}
+
+.saved-article-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
