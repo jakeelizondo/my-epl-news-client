@@ -13,9 +13,9 @@ const Header = (props) => {
 
   let content = (
     <nav className="header-nav">
+      <Link to="/news">News</Link>
       <Link to="/login">Login</Link>
       <Link to="/register">Sign up</Link>
-      <Link to="/news">News</Link>
     </nav>
   );
 
@@ -23,11 +23,11 @@ const Header = (props) => {
     content = (
       <div className="header-login-nav">
         <nav className="header-nav">
+          <Link to="/news">News</Link>
+          <Link to="/saved-news">My Saved</Link>
           <Link onClick={handleLogoutClick} to="/">
             Logout
           </Link>
-          <Link to="/news">News</Link>
-          <Link to="/saved-news">My Saved</Link>
         </nav>
       </div>
     );
