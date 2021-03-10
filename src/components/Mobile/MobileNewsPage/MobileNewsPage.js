@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import NewsFilterBar from '../NewsFilterBar/NewsFilterBar';
 import SmallArticleCard from '../SmallArticleCard/SmallArticleCard';
 import ArticleList from '../../ArticleList/ArticleList';
-import { TEAMKEY } from '../../../team-helpers/TEAMS';
 import ArticlesService from '../../../services/articles-service';
 import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import TokenService from '../../../services/token-service';
@@ -10,7 +9,6 @@ import ErrorModal from '../../UI/ErrorModal/ErrorModal';
 import EmptyNewsMessage from '../../UI/EmptyNewsMessage/EmptyNewsMessage';
 
 const MobileNewsPage = () => {
-  const [team, setTeam] = useState('');
   const [teamCode, setTeamCode] = useState('');
   const [articles, setArticles] = useState([]);
   const [userArticles, setUserArticles] = useState([]);
@@ -35,7 +33,6 @@ const MobileNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team)
         .then((res) => {
-          setTeam(TEAMKEY[user.team].teamcode);
           setArticles(res);
         })
         .then(() => {
@@ -64,7 +61,6 @@ const MobileNewsPage = () => {
         .then((res) => {
           window.scrollTo(0, 0);
           setIsLoading(false);
-          setTeam(TEAMKEY[filterTeamCode].teamcode);
           setArticles(res);
         })
         .catch((res) => {
@@ -147,9 +143,9 @@ const MobileNewsPage = () => {
   return (
     <div className="mobile-news-page">
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
-      <NewsFilterBar handleFilter={handleFilter} team={team} />
+      <NewsFilterBar handleFilter={handleFilter} team={teamCode} />
       {isLoading && <SoccerLoadingIndicator />}
-      {!team && <EmptyNewsMessage />}
+      {!teamCode && <EmptyNewsMessage />}
       {page && (
         <ArticleList
           handleNextClick={handleNextClick}

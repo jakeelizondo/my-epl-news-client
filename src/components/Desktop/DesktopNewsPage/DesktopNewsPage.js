@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import ArticleList from '../../ArticleList/ArticleList';
 import LargeArticleCard from '../LargeArticleCard/LargeArticleCard';
 import TeamFilterSidebar from '../TeamFilterSidebar/TeamFilterSidebar';
-import { TEAMKEY } from '../../../team-helpers/TEAMS';
 import ArticlesService from '../../../services/articles-service';
 import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import TokenService from '../../../services/token-service';
@@ -11,7 +10,6 @@ import ErrorModal from '../../UI/ErrorModal/ErrorModal';
 import './DesktopNewsPage.css';
 
 const DesktopNewsPage = () => {
-  const [team, setTeam] = useState('');
   const [teamCode, setTeamCode] = useState('');
   const [articles, setArticles] = useState([]);
   const [userArticles, setUserArticles] = useState([]);
@@ -31,7 +29,6 @@ const DesktopNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team)
         .then((res) => {
-          setTeam(TEAMKEY[user.team].teamcode);
           setArticles(res);
         })
         .then(() => {
@@ -83,7 +80,6 @@ const DesktopNewsPage = () => {
       ArticlesService.getTeamArticles(filterTeamCode, page)
         .then((res) => {
           setIsLoading(false);
-          setTeam(TEAMKEY[filterTeamCode].teamcode);
           setArticles(res);
         })
         .catch((res) => {
@@ -152,7 +148,7 @@ const DesktopNewsPage = () => {
 
       <TeamFilterSidebar handleFilter={handleFilter} currTeam={teamCode} />
 
-      {!team && <EmptyNewsMessage />}
+      {!teamCode && <EmptyNewsMessage />}
       {page && (
         <ArticleList
           handleNextClick={handleNextClick}

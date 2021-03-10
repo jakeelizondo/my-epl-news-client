@@ -29,6 +29,16 @@ const Sidebar = () => {
         <Link
           className={'menu-item'}
           onClick={() => handleCloseMenu()}
+          to={'/news'}
+        >
+          News
+        </Link>
+      </div>
+      <br />
+      <div>
+        <Link
+          className={'menu-item'}
+          onClick={() => handleCloseMenu()}
           to={'/login'}
         >
           Login
@@ -43,16 +53,6 @@ const Sidebar = () => {
           to={'/register'}
         >
           Sign Up
-        </Link>
-      </div>
-      <br />
-      <div>
-        <Link
-          className={'menu-item'}
-          onClick={() => handleCloseMenu()}
-          to={'/news'}
-        >
-          News
         </Link>
       </div>
     </React.Fragment>
