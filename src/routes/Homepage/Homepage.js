@@ -13,7 +13,10 @@ const Homepage = () => {
       <section className="section-1">
         <div className="visit-news">
           <img class="mobile-icon" src={leagueIcon} alt="soccer-tv-icon" />
-          <p>Stay up to date with your favorite teams.</p>
+          <p>
+            Stay up to date with your favorite teams, <br />
+            no account required.
+          </p>
           <Link to="/news">
             <button className="homepage-button">View News</button>
           </Link>
