@@ -1,8 +1,10 @@
 import React from 'react';
+import { format } from 'date-fns';
 import './SavedArticleCard.css';
 import deleteIcon from '../../assets/icons/delete.png';
 
 const SavedArticleCard = (props) => {
+  let articleDate = format(new Date(props.article.published_at), 'M/d/yy p');
   return (
     <div className="saved-article-card">
       <div className="saved-article-heading">
@@ -17,7 +19,10 @@ const SavedArticleCard = (props) => {
       <div className="saved-article-details">
         <div className="saved-article-by-text">
           <p className="saved-article-author">{props.article.author}</p>
-          <p className="saved-article-source">{props.article.source}</p>
+          <div className="saved-article-text">
+            <p className="saved-article-source">{props.article.source}</p>
+            <p className="saved-article-published">{`|  ${articleDate}`}</p>
+          </div>
         </div>
         <div className="saved-article-buttons">
           <button

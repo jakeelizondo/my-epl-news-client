@@ -91,6 +91,16 @@
     transition-duration: 700ms;
     text-decoration: none;
   }
+  .saved-article-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .saved-article-published {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 10px;
+  }
 }
 
 @media all and (min-width: 767px) {
@@ -218,5 +228,15 @@
     background-color: #38003c;
     color: white;
     transition-duration: 700ms;
+  }
+  .saved-article-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .saved-article-published {
+    font-size: 15px;
+    margin: 0;
+    padding-left: 10px;
   }
 }
