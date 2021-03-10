@@ -124,3 +124,14 @@
   color: white;
   transition-duration: 700ms;
 }
+
+.large-article-text {
+  display: flex;
+  align-items: center;
+}
+
+.large-article-published {
+  font-size: 15px;
+  margin: 0;
+  padding-left: 10px;
+}
