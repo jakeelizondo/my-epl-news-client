@@ -4,6 +4,5 @@
   justify-content: flex-start;
   flex: 1;
   margin: 0;
-  max-width: 300px;
   transition-duration: 1000ms;
 }
