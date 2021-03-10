@@ -7,7 +7,7 @@ import leagueIcon from '../../assets/icons/019-league.png';
 import footballIcon from '../../assets/icons/001-football.png';
 import calendarIcon from '../../assets/icons/023-schedule.png';
 
-const Homepage = () => {
+const Homepage = React.memo(() => {
   return (
     <div className="homepage">
       <section className="section-1">
@@ -56,6 +56,6 @@ const Homepage = () => {
       </section>
     </div>
   );
-};
+});
 
 export default Homepage;

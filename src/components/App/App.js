@@ -7,7 +7,7 @@ import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
 import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
-import NewsRoute from '../../routes/NewsRoute/NewsRoute';
+// import NewsRoute from '../../routes/NewsRoute/NewsRoute';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
 import { useMediaQuery } from 'react-responsive';
 import './App.css';
@@ -16,6 +16,7 @@ import Sidebar from '../Mobile/Sidebar/Sidebar';
 const UserSavedNewsRoute = React.lazy(() =>
   import('../../routes/UserSavedNewsRoute/UserSavedNewsRoute')
 );
+const NewsRoute = React.lazy(() => import('../../routes/NewsRoute/NewsRoute'));
 
 function App() {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 767px)' });
@@ -40,11 +41,11 @@ function App() {
 
       <main>
         <Switch>
-          <Route path={'/news'} component={NewsRoute} />
           <PublicOnlyRoute exact path={'/'} component={Homepage} />
           <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
           <PublicOnlyRoute path={'/login'} component={LoginRoute} />
           <Suspense fallback={<SoccerLoadingIndicator />}>
+            <Route path={'/news'} component={NewsRoute} />
             <PrivateRoute path={'/saved-news'} component={UserSavedNewsRoute} />
           </Suspense>
           <Route component={NotFoundRoute} />
