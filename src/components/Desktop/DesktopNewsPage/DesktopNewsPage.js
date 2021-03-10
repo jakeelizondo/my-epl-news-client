@@ -20,6 +20,7 @@ const DesktopNewsPage = () => {
 
   // if the user is already logged in, use their jwt token to pre-populate news page for them
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (TokenService.hasAuthToken()) {
       let token = TokenService.getAuthToken();
       let user = TokenService.parseAuthToken(token);
