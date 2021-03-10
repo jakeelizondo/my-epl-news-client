@@ -98,3 +98,16 @@
   margin: 0;
   padding-left: 10px;
 }
+
+.small-article-saved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #38003c;
+  color: white;
+  width: 60px;
+  margin-right: 20px;
+  border: none;
+  font-size: 18px;
+  transition-duration: 700ms;
+}

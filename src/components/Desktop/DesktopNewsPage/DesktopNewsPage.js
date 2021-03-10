@@ -31,12 +31,12 @@ const DesktopNewsPage = () => {
       setIsLoading(true);
       ArticlesService.getTeamArticles(user.team)
         .then((res) => {
-          setIsLoading(false);
           setTeam(TEAMKEY[user.team].teamcode);
           setArticles(res);
         })
         .then(() => {
           ArticlesService.getUserSavedArticles().then((articles) => {
+            setIsLoading(false);
             let userSavedArticles = [];
             for (const article of articles) {
               userSavedArticles.push(article.id);
@@ -58,9 +58,6 @@ const DesktopNewsPage = () => {
   const handleArticleSave = useCallback((id) => {
     setIsLoading(true);
     ArticlesService.saveArticle(id)
-      .then(() => {
-        setIsLoading(false);
-      })
       .then(() => {
         ArticlesService.getUserSavedArticles().then((articles) => {
           setIsLoading(false);

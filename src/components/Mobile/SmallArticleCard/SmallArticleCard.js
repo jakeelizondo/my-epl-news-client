@@ -4,6 +4,21 @@ import './SmallArticleCard.css';
 
 const SmallArticleCard = (props) => {
   let articleDate = format(new Date(props.article.published_at), 'M/d/yy p');
+
+  const generateSaveButton = () => {
+    if (props.isSaved) {
+      return <div className="small-article-saved">Saved</div>;
+    } else {
+      return (
+        <button
+          onClick={() => props.handleArticleSave(props.article.id)}
+          className="small-article-save"
+        >
+          Save
+        </button>
+      );
+    }
+  };
   return (
     <div className="small-article-card">
       <div className="small-article-heading">
@@ -24,14 +39,7 @@ const SmallArticleCard = (props) => {
           </div>
         </div>
         <div className="small-article-buttons">
-          {props.loggedIn ? (
-            <button
-              onClick={() => props.handleArticleSave(props.article.id)}
-              className="small-article-save"
-            >
-              Save
-            </button>
-          ) : null}
+          {props.loggedIn ? generateSaveButton() : null}
           <a
             className="small-article-link"
             href={props.article.article_url}
