@@ -1,7 +1,9 @@
 import React from 'react';
+import { format } from 'date-fns';
 import './SmallArticleCard.css';
 
 const SmallArticleCard = (props) => {
+  let articleDate = format(new Date(props.article.published_at), 'M/d/yy p');
   return (
     <div className="small-article-card">
       <div className="small-article-heading">
@@ -16,7 +18,10 @@ const SmallArticleCard = (props) => {
       <div className="small-article-details">
         <div className="small-article-by-text">
           <p className="small-article-author">{props.article.author}</p>
-          <p className="small-article-source">{props.article.source}</p>
+          <div className="small-article-text">
+            <p className="small-article-source">{props.article.source}</p>
+            <p className="small-article-published">{`|  ${articleDate}`}</p>
+          </div>
         </div>
         <div className="small-article-buttons">
           {props.loggedIn ? (
