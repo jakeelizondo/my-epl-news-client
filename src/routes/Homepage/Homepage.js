@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
-import newsScreenshot from '../../assets/screenshots/epl-news-screenshot.PNG';
-import savedScreenshot from '../../assets/screenshots/epl-news-saved.PNG';
+import newsScreenshot from '../../assets/screenshots/epl-news-screenshot.webp';
+import savedScreenshot from '../../assets/screenshots/epl-news-saved.webp';
 import leagueIcon from '../../assets/icons/019-league.png';
 import footballIcon from '../../assets/icons/001-football.png';
 import calendarIcon from '../../assets/icons/023-schedule.png';
