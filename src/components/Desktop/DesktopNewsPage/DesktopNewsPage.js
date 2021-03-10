@@ -14,6 +14,7 @@ const DesktopNewsPage = () => {
   const [team, setTeam] = useState('');
   const [teamCode, setTeamCode] = useState('');
   const [articles, setArticles] = useState([]);
+  const [userArticles, setUserArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
   const [page, setPage] = useState();
@@ -34,6 +35,15 @@ const DesktopNewsPage = () => {
           setTeam(TEAMKEY[user.team].teamcode);
           setArticles(res);
         })
+        .then(() => {
+          ArticlesService.getUserSavedArticles().then((articles) => {
+            let userSavedArticles = [];
+            for (const article of articles) {
+              userSavedArticles.push(article.id);
+            }
+            setUserArticles(userSavedArticles);
+          });
+        })
         .catch((res) => {
           setError(res.error.message);
         });
@@ -50,6 +60,16 @@ const DesktopNewsPage = () => {
     ArticlesService.saveArticle(id)
       .then(() => {
         setIsLoading(false);
+      })
+      .then(() => {
+        ArticlesService.getUserSavedArticles().then((articles) => {
+          setIsLoading(false);
+          let userSavedArticles = [];
+          for (const article of articles) {
+            userSavedArticles.push(article.id);
+          }
+          setUserArticles(userSavedArticles);
+        });
       })
       .catch((res) => {
         setError(res.error.message);
@@ -118,6 +138,7 @@ const DesktopNewsPage = () => {
           article={article}
           handleArticleSave={handleArticleSave}
           loggedIn={true}
+          isSaved={userArticles.includes(article.id) ? true : false}
         />
       ));
     } else {

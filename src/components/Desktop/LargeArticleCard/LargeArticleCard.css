@@ -110,7 +110,6 @@
   color: #38003c;
   padding: 0px 15px;
   margin-right: 30px;
-
   text-align: center;
   border: none;
   font-size: 20px;
@@ -134,4 +133,20 @@
   font-size: 15px;
   margin: 0;
   padding-left: 10px;
+}
+
+.large-article-saved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #38003c;
+  color: white;
+  margin-right: 30px;
+  padding: 0px 6px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  min-height: 50px;
+  transition-duration: 700ms;
+  text-decoration: none;
 }
