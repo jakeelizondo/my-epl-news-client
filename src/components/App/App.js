@@ -26,15 +26,18 @@ function App() {
     <div className="App">
       {isBigScreen && <Header />}
       {isMobileDevice && (
-        <div className="mobile-header">
-          <h1>
-            <Link to="/">My EPL News</Link>
-          </h1>
+        <React.Fragment>
+          <div className="mobile-header">
+            <h1>
+              <Link to="/">My EPL News</Link>
+            </h1>
+          </div>
           <div>
             <Sidebar />
           </div>
-        </div>
+        </React.Fragment>
       )}
+
       <main>
         <Switch>
           <Route path={'/news'} component={NewsRoute} />
