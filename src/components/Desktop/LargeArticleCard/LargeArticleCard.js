@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import './LargeArticleCard.css';
 
 const LargeArticleCard = (props) => {
-  let articleDate = format(new Date(props.article.published_at), 'd/M/yy p');
+  let articleDate = format(new Date(props.article.published_at), 'M/d/yy p');
 
   return (
     <div className="large-article-card">
