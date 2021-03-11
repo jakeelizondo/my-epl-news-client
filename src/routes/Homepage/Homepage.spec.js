@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import Homepage from './Homepage';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('App', () => {
+describe('Homepage component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <App />
+        <Route exact path={'/'} component={Homepage} />
       </BrowserRouter>,
       div
     );

@@ -1,17 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import ErrorModal from './ErrorModal';
 
-describe('App', () => {
+describe('ErrorModal component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>,
-      div
-    );
+    ReactDOM.render(<ErrorModal />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

@@ -44,11 +44,11 @@ function App() {
           <PublicOnlyRoute exact path={'/'} component={Homepage} />
           <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
           <PublicOnlyRoute path={'/login'} component={LoginRoute} />
+          <Route component={NotFoundRoute} />
           <Suspense fallback={<SoccerLoadingIndicator />}>
             <Route path={'/news'} component={NewsRoute} />
             <PrivateRoute path={'/saved-news'} component={UserSavedNewsRoute} />
           </Suspense>
-          <Route component={NotFoundRoute} />
         </Switch>
       </main>
     </div>

@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import UserSavedNewsRoute from './UserSavedNewsRoute';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('App', () => {
+describe('UserSavedNewsRoute component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <App />
+        <Route path={'/saved-news'} component={UserSavedNewsRoute} />
       </BrowserRouter>,
       div
     );

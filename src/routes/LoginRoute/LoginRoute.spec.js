@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import LoginRoute from './LoginRoute';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('App', () => {
+describe('LoginRoute component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <App />
+        <Route exact path={'/login'} component={LoginRoute} />
       </BrowserRouter>,
       div
     );
