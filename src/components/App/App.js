@@ -7,8 +7,8 @@ import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
 import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
-// import NewsRoute from '../../routes/NewsRoute/NewsRoute';
 import SoccerLoadingIndicator from '../UI/SoccerLoadingIndicator/SoccerLoadingIndicator';
+import ErrorBoundary from '../../routes/ErrorBoundary/ErrorBoundary';
 import { useMediaQuery } from 'react-responsive';
 import './App.css';
 import Sidebar from '../Mobile/Sidebar/Sidebar';
@@ -25,32 +25,37 @@ function App() {
   });
   return (
     <div className="App">
-      {isBigScreen && <Header />}
-      {isMobileDevice && (
-        <React.Fragment>
-          <div className="mobile-header">
-            <h1>
-              <Link to="/">My EPL News</Link>
-            </h1>
-          </div>
-          <div>
-            <Sidebar />
-          </div>
-        </React.Fragment>
-      )}
+      <ErrorBoundary>
+        {isBigScreen && <Header />}
+        {isMobileDevice && (
+          <React.Fragment>
+            <div className="mobile-header">
+              <h1>
+                <Link to="/">My EPL News</Link>
+              </h1>
+            </div>
+            <div>
+              <Sidebar />
+            </div>
+          </React.Fragment>
+        )}
 
-      <main>
-        <Switch>
-          <PublicOnlyRoute exact path={'/'} component={Homepage} />
-          <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
-          <PublicOnlyRoute path={'/login'} component={LoginRoute} />
-          <Route component={NotFoundRoute} />
-          <Suspense fallback={<SoccerLoadingIndicator />}>
-            <Route path={'/news'} component={NewsRoute} />
-            <PrivateRoute path={'/saved-news'} component={UserSavedNewsRoute} />
-          </Suspense>
-        </Switch>
-      </main>
+        <main>
+          <Switch>
+            <PublicOnlyRoute exact path={'/'} component={Homepage} />
+            <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
+            <PublicOnlyRoute path={'/login'} component={LoginRoute} />
+            <Route component={NotFoundRoute} />
+            <Suspense fallback={<SoccerLoadingIndicator />}>
+              <Route path={'/news'} component={NewsRoute} />
+              <PrivateRoute
+                path={'/saved-news'}
+                component={UserSavedNewsRoute}
+              />
+            </Suspense>
+          </Switch>
+        </main>
+      </ErrorBoundary>
     </div>
   );
 }
