@@ -8,6 +8,7 @@ import TokenService from '../../../services/token-service';
 import EmptyNewsMessage from '../../UI/EmptyNewsMessage/EmptyNewsMessage';
 import ErrorModal from '../../UI/ErrorModal/ErrorModal';
 import './DesktopNewsPage.css';
+import NoArticlesMessage from '../../UI/NoArticlesMessage/NoArticlesMessage';
 
 const DesktopNewsPage = () => {
   const [teamCode, setTeamCode] = useState('');
@@ -150,7 +151,7 @@ const DesktopNewsPage = () => {
       <TeamFilterSidebar handleFilter={handleFilter} currTeam={teamCode} />
 
       {!teamCode && <EmptyNewsMessage />}
-      {page && (
+      {articles.length >= 1 && page ? (
         <ArticleList
           handleNextClick={handleNextClick}
           page={page}
@@ -159,6 +160,8 @@ const DesktopNewsPage = () => {
         >
           {!isEnd && generateArticles()}
         </ArticleList>
+      ) : (
+        <NoArticlesMessage />
       )}
     </div>
   );

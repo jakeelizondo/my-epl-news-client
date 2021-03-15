@@ -51,11 +51,20 @@ function App() {
           <Suspense fallback={<SoccerLoadingIndicator />}>
             <Switch>
               <PublicOnlyRoute exact path={'/'} component={Homepage} />
-              <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
-              <PublicOnlyRoute path={'/login'} component={LoginRoute} />
-              <Route path={'/news'} component={NewsRoute} />
-              <PrivateRoute path={'/account'} component={MyAccountRoute} />
+              <PublicOnlyRoute
+                exact
+                path={'/register'}
+                component={RegisterRoute}
+              />
+              <PublicOnlyRoute exact path={'/login'} component={LoginRoute} />
+              <Route exact path={'/news'} component={NewsRoute} />
               <PrivateRoute
+                exact
+                path={'/account'}
+                component={MyAccountRoute}
+              />
+              <PrivateRoute
+                exact
                 path={'/saved-news'}
                 component={UserSavedNewsRoute}
               />

@@ -7,6 +7,7 @@ import SoccerLoadingIndicator from '../../UI/SoccerLoadingIndicator/SoccerLoadin
 import TokenService from '../../../services/token-service';
 import ErrorModal from '../../UI/ErrorModal/ErrorModal';
 import EmptyNewsMessage from '../../UI/EmptyNewsMessage/EmptyNewsMessage';
+import NoArticlesMessage from '../../UI/NoArticlesMessage/NoArticlesMessage';
 
 const MobileNewsPage = () => {
   const [teamCode, setTeamCode] = useState('');
@@ -146,7 +147,7 @@ const MobileNewsPage = () => {
       <NewsFilterBar handleFilter={handleFilter} team={teamCode} />
       {isLoading && <SoccerLoadingIndicator />}
       {!teamCode && <EmptyNewsMessage />}
-      {page && (
+      {articles.length >= 1 && page ? (
         <ArticleList
           handleNextClick={handleNextClick}
           page={page}
@@ -155,6 +156,8 @@ const MobileNewsPage = () => {
         >
           {!isEnd && generateArticles()}
         </ArticleList>
+      ) : (
+        <NoArticlesMessage />
       )}
     </div>
   );
