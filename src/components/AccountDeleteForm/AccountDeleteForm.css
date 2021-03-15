@@ -1,0 +1,177 @@
+@media all and (max-width: 767px) {
+  .account-delete-modal {
+    position: fixed;
+    top: 20vh;
+    left: 10%;
+    width: 80%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    z-index: 100;
+    border-radius: 7px;
+  }
+
+  .account-delete-modal h2 {
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+    background: #38003c;
+    color: white;
+    border-radius: 7px 7px 0 0;
+  }
+
+  .account-delete-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .account-delete-modal img {
+    max-width: 20%;
+  }
+
+  .account-delete-modal p {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .account-delete-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .account-delete-inputs label,
+  input {
+    margin-bottom: 10px;
+  }
+
+  .account-delete-modal__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
+  }
+
+  .account-delete-modal__actions button {
+    background-color: #00ff85;
+    padding: 0px 15px;
+    margin: 10px;
+    font-size: 20px;
+    min-height: 35px;
+    transition-duration: 700ms;
+    border: none;
+  }
+
+  .account-delete-modal__actions button:disabled {
+    background-color: lightgray;
+    color: white;
+    transition-duration: 700ms;
+  }
+
+  .delete-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .account-delete-modal {
+    position: fixed;
+    top: 30vh;
+    left: calc(50% - 15rem);
+    width: 30rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    z-index: 100;
+    border-radius: 7px;
+  }
+
+  .account-delete-modal h2 {
+    margin: 0px;
+    padding: 1rem;
+    text-align: center;
+    background: #38003c;
+    color: white;
+    border-radius: 7px 7px 0 0;
+  }
+
+  .account-delete-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .account-delete-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .account-delete-inputs label,
+  input {
+    margin-bottom: 10px;
+  }
+
+  .account-delete-modal img {
+    max-width: 20%;
+  }
+
+  .account-delete-modal p {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .account-delete-modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
+  }
+
+  .account-delete-modal__actions button {
+    background-color: #00ff85;
+    cursor: pointer;
+    padding: 0px 15px;
+    margin: 10px;
+    font-size: 20px;
+    min-height: 35px;
+    transition-duration: 700ms;
+    border: none;
+  }
+
+  .account-delete-modal__actions button:disabled {
+    background-color: lightgray;
+    color: white;
+    transition-duration: 700ms;
+  }
+
+  .account-delete-modal__actions button:disabled:hover {
+    background-color: lightgray;
+    transition-duration: 700ms;
+  }
+
+  .account-delete-modal__actions button:hover {
+    background-color: #38003c;
+    color: white;
+    transition-duration: 700ms;
+  }
+
+  .delete-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+  }
+}

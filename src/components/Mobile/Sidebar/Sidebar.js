@@ -78,6 +78,16 @@ const Sidebar = () => {
         </div>
         <br />
         <div>
+          <Link
+            className={'menu-item'}
+            onClick={handleCloseMenu}
+            to={'/account'}
+          >
+            Account
+          </Link>
+        </div>
+        <br />
+        <div>
           <Link className={'menu-item'} onClick={handleLogoutClick} to={'/'}>
             Logout
           </Link>

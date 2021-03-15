@@ -25,6 +25,7 @@ const Header = (props) => {
         <nav className="header-nav">
           <Link to="/news">News</Link>
           <Link to="/saved-news">My Saved</Link>
+          <Link to="/account">Account</Link>
           <Link onClick={handleLogoutClick} to="/">
             Logout
           </Link>

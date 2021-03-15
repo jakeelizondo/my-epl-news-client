@@ -3,7 +3,6 @@ import Header from '../Header/Header';
 import { Route, Switch, Link } from 'react-router-dom';
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
-import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
 import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import Homepage from '../../routes/Homepage/Homepage';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
@@ -17,6 +16,14 @@ const UserSavedNewsRoute = React.lazy(() =>
   import('../../routes/UserSavedNewsRoute/UserSavedNewsRoute')
 );
 const NewsRoute = React.lazy(() => import('../../routes/NewsRoute/NewsRoute'));
+
+const MyAccountRoute = React.lazy(() =>
+  import('../../routes/MyAccountRoute/MyAccountRoute')
+);
+
+const RegisterRoute = React.lazy(() =>
+  import('../../routes/RegisterRoute/RegisterRoute')
+);
 
 function App() {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 767px)' });
@@ -41,19 +48,20 @@ function App() {
         )}
 
         <main>
-          <Switch>
-            <PublicOnlyRoute exact path={'/'} component={Homepage} />
-            <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
-            <PublicOnlyRoute path={'/login'} component={LoginRoute} />
-            <Route component={NotFoundRoute} />
-            <Suspense fallback={<SoccerLoadingIndicator />}>
+          <Suspense fallback={<SoccerLoadingIndicator />}>
+            <Switch>
+              <PublicOnlyRoute exact path={'/'} component={Homepage} />
+              <PublicOnlyRoute path={'/register'} component={RegisterRoute} />
+              <PublicOnlyRoute path={'/login'} component={LoginRoute} />
               <Route path={'/news'} component={NewsRoute} />
+              <PrivateRoute path={'/account'} component={MyAccountRoute} />
               <PrivateRoute
                 path={'/saved-news'}
                 component={UserSavedNewsRoute}
               />
-            </Suspense>
-          </Switch>
+              <Route component={NotFoundRoute} />
+            </Switch>
+          </Suspense>
         </main>
       </ErrorBoundary>
     </div>

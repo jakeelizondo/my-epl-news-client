@@ -12,7 +12,7 @@ const Homepage = React.memo(() => {
     <div className="homepage">
       <section className="section-1">
         <div className="visit-news">
-          <img class="mobile-icon" src={leagueIcon} alt="soccer-tv-icon" />
+          <img className="mobile-icon" src={leagueIcon} alt="soccer-tv-icon" />
           <p>
             Stay up to date with your favorite teams, <br />
             no account required.
@@ -31,7 +31,7 @@ const Homepage = React.memo(() => {
         </div>
         <div className="save-articles">
           <img
-            class="mobile-icon"
+            className="mobile-icon"
             src={calendarIcon}
             alt="soccer-calendar-icon"
           />
@@ -43,7 +43,11 @@ const Homepage = React.memo(() => {
       </section>
       <section className="section-3">
         <div className="section-3-cta">
-          <img class="mobile-icon" src={footballIcon} alt="soccer-ball-icon" />
+          <img
+            className="mobile-icon"
+            src={footballIcon}
+            alt="soccer-ball-icon"
+          />
           <p>
             Sign up today or just hit the news page for the latest EPL updates.
           </p>
