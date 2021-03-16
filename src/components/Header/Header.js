@@ -11,6 +11,9 @@ const Header = (props) => {
     userContext.processLogout();
   };
 
+  // I don't know if your text editor has this feature enabled but if not
+  // you can install a plugin that lets you see trailing blank space and eliminate
+  // them. It's just to tidy up things and follow general conventions in the dev world.
   let content = (
     <nav className="header-nav">
       <Link to="/news">News</Link>

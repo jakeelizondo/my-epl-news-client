@@ -15,6 +15,7 @@
     padding: 1rem;
     background: #e90052;
     color: white;
+    // this can also be border-top-right-radius: 7px;
     border-radius: 7px 7px 0 0;
   }
 
@@ -27,6 +28,7 @@
   }
 
   .error-modal img {
+    // be careful using percentages for width. it can be tricky with different screen sizes and resolutions.
     max-width: 20%;
   }
 

@@ -1,3 +1,8 @@
+/*
+If you look into something called Sass, you can start declaring and use mixins.
+For example, values like 767px can be declared as variables and mixed in to your
+css, reducing duplication and introducing features that make your CSS more DRY.
+*/
 @media all and (max-width: 767px) {
   .account-change-modal {
     position: fixed;
