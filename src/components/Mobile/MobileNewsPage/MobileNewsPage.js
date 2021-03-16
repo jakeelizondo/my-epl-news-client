@@ -157,7 +157,9 @@ const MobileNewsPage = () => {
           {!isEnd && generateArticles()}
         </ArticleList>
       ) : null}
-      {teamCode && articles.length < 1 ? <NoArticlesMessage /> : null}
+      {teamCode && articles.length < 1 && isLoading === false ? (
+        <NoArticlesMessage />
+      ) : null}
     </div>
   );
 };
