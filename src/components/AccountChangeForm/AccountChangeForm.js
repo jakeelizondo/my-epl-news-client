@@ -13,6 +13,8 @@ const AccountChangeForm = (props) => {
   const handleSubmitAccountChange = () => {
     setIsLoading(true);
     const changeObj = { [props.changing]: newVal };
+     // A suggestion would be figure out a way to suppress console logs in production. There should be tools and javascript packages
+     // to help you to do that easily
     console.log(changeObj);
     UserAccountService.updateUserDetails(changeObj)
       .then((response) => {

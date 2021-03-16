@@ -6,6 +6,8 @@
     padding: 2% 5%;
   }
 
+  // As suggested before, there should be a way to extract out things like #04f5ff as
+  // variables and just reuse the variables throughout your CSS.
   .pagination-bar button {
     background-color: #04f5ff;
     padding: 5px 10px;

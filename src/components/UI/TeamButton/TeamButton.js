@@ -11,6 +11,7 @@ export default function TeamButton(props) {
         <p>{props.team.teamname}</p>
       </div>
       <div className="team-button-img">
+        // Can TOT be extracted out into a global constant?
         {props.team.teamcode === 'TOT' && props.isActive && (
           <img src={props.team.logoURLWhite} alt={props.team.teamname} />
         )}

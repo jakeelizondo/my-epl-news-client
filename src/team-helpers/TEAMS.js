@@ -1,3 +1,11 @@
+// While it works to have these constants stored on the client side,
+// I think it makes more sense to move these constants out into the server
+// and have separate endpoints that gets these values and then you can
+// cache them on the client side.
+// Generally speaking, client code like React and Vue should just have
+// presentation logic, and shouldn't hold data.
+// I think when we discussed creating constants for holding data, I thought that
+// you were talking about putting these in the API rather than on the React side.
 const TEAMS = [
   { teamname: 'Arsenal', teamcode: 'ARS' },
   { teamname: 'Aston Villa', teamcode: 'AVL' },
