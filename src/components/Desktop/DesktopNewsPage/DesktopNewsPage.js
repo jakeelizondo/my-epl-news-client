@@ -160,9 +160,8 @@ const DesktopNewsPage = () => {
         >
           {!isEnd && generateArticles()}
         </ArticleList>
-      ) : (
-        <NoArticlesMessage />
-      )}
+      ) : null}
+      {teamCode && articles.length < 1 ? <NoArticlesMessage /> : null}
     </div>
   );
 };
