@@ -8,7 +8,7 @@ My EPL News is a full stack CRUD application that uses a third party API to fetc
 
 ## Application screenshot
 
-![gmy epl news screenshot](https://github.com/jakeelizondo/gift-closet-client/blob/master/src/images/gift-closet-screenshot.PNG)
+![gmy epl news screenshot](https://raw.githubusercontent.com/jakeelizondo/my-epl-news-client/master/src/assets/screenshots/epl-news-screenshot.webp)
 
 ### Technology used
 
