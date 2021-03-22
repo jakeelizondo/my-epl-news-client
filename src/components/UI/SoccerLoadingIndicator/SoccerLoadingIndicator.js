@@ -2,6 +2,8 @@ import React from 'react';
 
 import './SoccerLoadingIndicator.css';
 
+// Credit for soccer loading indicator design goes to https://codemyui.com/soccer-ball-hexagon-pattern-loader/
+
 const SoccerLoadingIndicator = () => (
   <div className="main-fader" responsive-height-comments="true">
     <div className="loader">

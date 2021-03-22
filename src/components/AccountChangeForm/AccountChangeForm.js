@@ -13,7 +13,6 @@ const AccountChangeForm = (props) => {
   const handleSubmitAccountChange = () => {
     setIsLoading(true);
     const changeObj = { [props.changing]: newVal };
-    console.log(changeObj);
     UserAccountService.updateUserDetails(changeObj)
       .then((response) => {
         setIsLoading(false);
