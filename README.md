@@ -6,6 +6,10 @@ View the live application at: https://my-epl-news.vercel.app/
 
 My EPL News is a full stack CRUD application that uses a third party API to fetch and store articles about current English Premier League teams. The client application is built with React Hooks to integrate with a Node.js server. Registered users can add and delete saved articles
 
+## Application screenshot
+
+![gmy epl news screenshot](https://raw.githubusercontent.com/jakeelizondo/my-epl-news-client/master/src/assets/screenshots/epl-news-screenshot.webp)
+
 ### Technology used
 
 This application was built on React with React Hooks, using the create-react-app boilerplate as a starter.
